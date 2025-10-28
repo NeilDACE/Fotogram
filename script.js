@@ -25,20 +25,20 @@ function getNoteTemplate(index) {
     pictureArr[index]
   }" alt="Bild ${index}">
     <dialog id="pictureDialog-${index}" class="picture-dialog" onclick="closeDialog(${index})">
-          <div class="dialog-container" onclick="event.stopPropagation()">
+          <div class="picture-dialog-container" onclick="event.stopPropagation()">
           <header>
             <h2>
-              ${pictureArr[index].slice(15)}
+              ${imgName(index)}
             </h2>
             <button class="button" onclick="closeDialog(${index})">X</button>
           </header>
           <section>
-            <img class="dialog-picture" src="${
-              pictureArr[index]
-            }" alt="Bild ${index}">
+            <img class="dialog-picture" src="${pictureArr[index]}" alt="Bild ${index}">
           </section>
           <footer>
-
+          <button class="button" onclick="nextLeft(${index})">←</button>
+          <p>${getImgNumber(index)}/12</p>
+          <button class="button" onclick="nextRight(${index})">→</button>
           </footer>
           </div>
         </dialog>`;
@@ -53,3 +53,37 @@ function closeDialog(index) {
   document.getElementById(`pictureDialog-${index}`).close();
   document.getElementById(`pictureDialog-${index}`).classList.remove("opened");
 }
+
+function imgName(index) {
+  return pictureArr[index].slice(15);
+}
+
+function getImgNumber(index) {
+  let ImgNumber = index + 1;
+  return ImgNumber;
+}
+
+function nextLeft(index) {
+  if (index == 0) {
+    index = pictureArr.length - 1;
+    closeDialog(0);
+    openDialog(index);
+    return;
+  }
+  let nextNumber = index - 1
+  closeDialog(index);
+  openDialog(nextNumber);
+}
+
+function nextRight(index) {
+  if (index == pictureArr.length - 1) {
+    index = 0;
+    closeDialog(pictureArr.length - 1);
+    openDialog(index);
+    return;
+  }
+  let nextNumber = index + 1
+  closeDialog(index);
+  openDialog(nextNumber);
+}
+

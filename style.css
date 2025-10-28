@@ -1,8 +1,45 @@
+/* --------------------------------------------- */
+/*                 SCHRIFTARTEN                  */
+/* --------------------------------------------- */
+@font-face {
+  font-family: "Fredoka";
+  src: url("./fonts/Fredoka/Fredoka-VariableFont_wdth,wght.ttf") format("woff2"),
+       url("./fonts/Fredoka/Fredoka-VariableFont_wdth,wght.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* --------------------------------------------- */
+/*              Custom Properties                */
+/* --------------------------------------------- */
+:root {
+  --primary-color1: rgb(8, 32, 41);
+  --primary-color2: rgb(5, 23, 31);
+}
+
+
+/* --------------------------------------------- */
+/*                   GLOBAL                      */
+/* --------------------------------------------- */
 body {
+  font-family: Fredoka, sans-serif;
   margin: 0;
 }
+
+h1 {
+  margin-block-start: 32px;
+  margin-block-end: 64px;
+}
+
+h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* --------------------------------------------- */
+/*                   HEADER                      */
+/* --------------------------------------------- */
 header {
-  background-color: rgb(8, 32, 41);
+  background-color: var(--primary-color1);
   height: 10vh;
   display: flex;
   justify-content: flex-start;
@@ -14,22 +51,24 @@ header {
   height: 80px;
   margin-left: 24px;
 }
+
+/* --------------------------------------------- */
+/*                    MAIN                       */
+/* --------------------------------------------- */
 main {
-  background-color: rgb(5, 23, 31);
-  height: 80vh;
+  background-color: var(--primary-color2);
+  min-height: 80vh;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-h1 {
-  margin-block-start: 32px;
-  margin-block-end: 64px;
-}
-h2 {
-  margin-block-start: 0;
-  margin-block-end: 0;
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pictures {
@@ -41,19 +80,24 @@ h2 {
   margin: 8px;
 }
 
+/* --------------------------------------------- */
+/*                 DIALOG / MODAL                */
+/* --------------------------------------------- */
 .picture-dialog {
-  background-color: rgb(8, 32, 41);
+  background-color: var(--primary-color1);
   padding: 0;
   color: white;
   border: 1px solid grey;
   border-radius: 16px;
 }
-.dialog-container {
+
+.picture-dialog-container {
   padding: 32px;
 }
+
 .picture-dialog::backdrop {
   background-color: black;
-  opacity: 0;
+  opacity: 0.6;
 }
 
 .picture-dialog.opened::backdrop {
@@ -66,14 +110,22 @@ h2 {
   justify-content: space-between;
   align-items: flex-start;
 }
+
+.dialog-picture {
+  width: 650px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* --------------------------------------------- */
+/*                    BUTTONS                    */
+/* --------------------------------------------- */
 .button {
-  background-color: rgb(143, 216, 227);
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius:4px;
-  font-weight: 600;
+  font-family: Fredoka, sans-serif;
+  background-color: rgb(159, 240, 252);
+  border-radius: 50%;
+  font-weight: 300;
+  font-size: 24px;
   transition: all 100ms ease-in-out;
 }
 
@@ -82,20 +134,16 @@ h2 {
   transition: ease-in;
 }
 
-
-.dialog-picture {
-  width: 650px;
-  height: 400px;
-  object-fit: cover;
-}
-
+/* --------------------------------------------- */
+/*                    FOOTER                     */
+/* --------------------------------------------- */
 footer {
-  background-color: rgb(8, 32, 41);
+  background-color: var(--primary-color1);
   height: 10vh;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   gap: 32px;
 }
 
@@ -128,3 +176,35 @@ footer {
   width: 24px;
   height: 24px;
 }
+
+/* --------------------------------------------- */
+/*                 MEDIA QUERIES                 */
+/* --------------------------------------------- */
+@media (max-width: 800px) {
+  .dialog-picture {
+    width: 450px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dialog-picture {
+    width: 280px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 400px) {
+  .dialog-picture {
+    width: 200px;
+    height: 120px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+
