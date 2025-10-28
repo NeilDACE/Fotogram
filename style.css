@@ -39,8 +39,56 @@ h2 {
   border-radius: 12px;
   border: 0.5px solid gray;
   margin: 8px;
-
 }
+
+.picture-dialog {
+  background-color: rgb(8, 32, 41);
+  padding: 0;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 16px;
+}
+.dialog-container {
+  padding: 32px;
+}
+.picture-dialog::backdrop {
+  background-color: black;
+  opacity: 0;
+}
+
+.picture-dialog.opened::backdrop {
+  background-color: black;
+  opacity: 0.6;
+  transition: all 150ms ease-in;
+}
+
+.picture-dialog header {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.button {
+  background-color: rgb(143, 216, 227);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius:4px;
+  font-weight: 600;
+  transition: all 100ms ease-in-out;
+}
+
+.button:hover {
+  background-color: rgb(92, 144, 189);
+  transition: ease-in;
+}
+
+
+.dialog-picture {
+  width: 650px;
+  height: 400px;
+  object-fit: cover;
+}
+
 footer {
   background-color: rgb(8, 32, 41);
   height: 10vh;
