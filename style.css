@@ -40,6 +40,9 @@ h2 {
 header {
   background-color: var(--primary-color1);
   height: 10vh;
+  top: 0;
+  position: sticky;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
