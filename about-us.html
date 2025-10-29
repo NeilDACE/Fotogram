@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body onload="render()">
+  <body>
     <header role="banner">
       <img
         class="img-logo"
         src="./img/logo/Fotogram_Logo.svg"
         alt="Fotogram logo"
       />
-      <button aria-haspopup="menu" aria-controls="menu" tabindex="0" class="menu-button" id="menu-button" onclick="toggleMenu()">MENU</button>
-      <nav aria-labelledby="menu-button" id="menu" class="hidden-menu closed-menu">
+      <button class="menu-button" onclick="toggleMenu()">MENU</button>
+      <nav id="menu" class="hidden-menu closed-menu">
         <ul class="menu-list">
-          <li aria-label="Home"><a href="./index.html">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li>
             <a href="#">Upload photos<br />(not yet available)</a>
           </li>
@@ -29,12 +29,39 @@
     </header>
 
     <main>
-      <h1>Welcome to Fotogram – your personal photo album!</h1>
-      <section
-        aria-label="Photo gallery"
-        class="content-container"
-        id="content"
-      ></section>
+      <h1>About us</h1>
+      <p>Information pursuant to § 5 DDG</p>
+      <p>
+        Nil Vollhardt<br />
+        <br />
+        Weißbachweg 25<br />
+        79312 Emmendingen<br />
+        Germany
+      </p>
+      <p>
+        <strong>Represented by:</strong><br />
+        Nil Vollhardt
+      </p>
+      <p>
+        <strong>Contact:</strong><br />
+        Email: <a>Nil.Vollhardt@gmail.com</a><br />
+      </p>
+      <p>
+        <strong
+          >Consumer Dispute Resolution / Universal Arbitration Board</strong
+        ><br />
+        We do not take part in dispute resolution proceedings before a consumer
+        arbitration board and are not obliged to do so.
+      </p>
+      <p>
+        Imprint generated with
+        <a class="link" href="https://impressum-generator.de" rel="dofollow"
+          >Impressum-Generator.de</a
+        >. Powered by
+        <a class="link" href="https://www.kanzlei-hasselbach.de/" rel="nofollow"
+          >Franziska Hasselbach, Bonn</a
+        >.
+      </p>
     </main>
 
     <footer role="contentinfo">

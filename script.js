@@ -114,4 +114,9 @@ function nextRight(index) {
   openDialog(nextNumber);
 }
 
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("closed-menu");
+}
+
+
 
