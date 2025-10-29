@@ -134,3 +134,20 @@ function toggleMenu() {
     button.setAttribute("aria-expanded", "true");
   }
 }
+
+/* 
+  Hide the links when the menu is closed(no focus with tab).
+  Change tabindex.
+*/
+function ChangeTabIndex() {
+  let links = document.getElementsByClassName("menu-link");
+  let menu = document.getElementById("menu");
+
+  for (let i = 0; i < links.length; i++) {
+    if (menu.classList.contains("closed-menu")) {
+      links[i].setAttribute("tabindex", -1);
+    } else {
+      links[i].setAttribute("tabindex", 0);
+    }
+  }
+}
