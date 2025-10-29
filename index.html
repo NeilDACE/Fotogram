@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fotogram</title>
+    <title>Fotogram - Your personality photo album</title>
     <link rel="icon" type="image/png" href="./img/favicon/favicon.png" />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body onload="render()">
-    <header>
+    <header role="banner">
       <img
         class="img-logo"
         src="./img/logo/Fotogram_Logo.svg"
@@ -18,19 +18,19 @@
     </header>
 
     <main>
-      <h1>Welcome to your photo album!</h1>
-      <section class="content-container" id="content">
+      <h1>Welcome to Fotogram – your personal photo album!</h1>
+      <section aria-label="Photo gallery" class="content-container" id="content">
         
       </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <div class="created-by-container">
         <h2>Created by:</h2>
         <img
           class="profile-picture"
           src="./img/profile/profile-picture.png"
-          alt="Profile picture"
+          alt="Profile picture from Nil V."
         />
         <p>Nil V.</p>
       </div>
