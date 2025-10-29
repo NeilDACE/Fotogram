@@ -21,9 +21,7 @@ function render() {
 }
 
 function getNoteTemplate(index) {
-  return `<img class="pictures" onclick="openDialog(${index})" src="${
-    pictureArr[index]
-  }" alt="Bild ${index}">
+  return `<button class="open-dialog-button" tabindex="0" onclick="openDialog(${index})"><img class="pictures" src="${pictureArr[index]}" alt="picture ${index}"></button>
     <dialog id="pictureDialog-${index}" class="picture-dialog" onclick="closeDialog(${index})">
           <div class="picture-dialog-container" onclick="event.stopPropagation()">
           <header>
