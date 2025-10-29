@@ -30,7 +30,9 @@ function render() {
   Includes navigation buttons, a header, and close functionality.
 */
 function getNoteTemplate(index) {
-  return `<button aria-haspopup="dialog" aria-controls="pictureDialog-${index}" class="open-dialog-button" tabindex="0" onclick="openDialog(${index})"><img class="pictures" src="${pictureArr[index]}" alt="picture ${index}"></button>
+  return `<button aria-haspopup="dialog" aria-controls="pictureDialog-${index}" class="open-dialog-button" tabindex="0" onclick="openDialog(${index})"><img class="pictures" src="${
+    pictureArr[index]
+  }" alt="picture ${index}"></button>
     <dialog id="pictureDialog-${index}" aria-labelledby="dialogAndPictureTitle" class="picture-dialog" onclick="closeDialog(${index})">
           <div class="picture-dialog-container" onclick="event.stopPropagation()">
           <header>
@@ -40,7 +42,9 @@ function getNoteTemplate(index) {
             <button class="button" aria-label="close button" onclick="closeDialog(${index})">X</button>
           </header>
           <section>
-            <img class="dialog-picture" src="${pictureArr[index]}" alt="Image ${index}">
+            <img class="dialog-picture" src="${
+              pictureArr[index]
+            }" alt="Image ${index}">
           </section>
           <footer>
           <button class="button" aria-label="go to previous image" onclick="nextLeft(${index})">←</button>
@@ -114,9 +118,19 @@ function nextRight(index) {
   openDialog(nextNumber);
 }
 
+/* 
+  Open or close the menu.
+  Change aria-expanded.
+*/
 function toggleMenu() {
-    document.getElementById("menu").classList.toggle("closed-menu");
+  let menu = document.getElementById("menu");
+  let button = document.getElementById("menu-button");
+
+  menu.classList.toggle("closed-menu");
+
+  if (menu.classList.contains("closed-menu")) {
+    button.setAttribute("aria-expanded", "false");
+  } else {
+    button.setAttribute("aria-expanded", "true");
+  }
 }
-
-
-

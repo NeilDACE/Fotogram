@@ -15,11 +15,11 @@
         src="./img/logo/Fotogram_Logo.svg"
         alt="Fotogram logo"
       />
-      <button class="menu-button" onclick="toggleMenu()">MENU</button>
-      <nav id="menu" class="hidden-menu closed-menu">
+      <button aria-haspopup="true" aria-controls="menu" aria-expanded="false" tabindex="0" class="menu-button" id="menu-button" onclick="toggleMenu()">MENU</button>
+      <nav aria-labelledby="menu-button" id="menu" class="hidden-menu closed-menu">
         <ul class="menu-list">
           <li><a href="./index.html">Home</a></li>
-            <li>
+          <li>
             <a href="#">Upload photos<br />(not yet available)</a>
           </li>
           <li><a href="./about-us.html">About us</a></li>
