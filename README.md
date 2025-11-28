@@ -1,57 +1,62 @@
 # 📸 Fotogram
 
-![Status](https://img.shields.io/badge/Status-In%20Entwicklung-yellow)
-![Lizenz](https://img.shields.io/badge/Lizenz-MIT-blue)
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-## 🌟 Projektbeschreibung
+## 🌟 Project Description
 
-**Fotogram** ist ein einfaches, reines Frontend-Webprojekt, das als Prototyp oder Übung für eine Foto-Sharing-Plattform oder eine visuelle Blog-Seite dient. Es nutzt grundlegende Webtechnologien, um eine ästhetisch ansprechende, inhaltsorientierte Benutzeroberfläche zu schaffen.
+**Fotogram** is a straightforward, pure front-end web project that functions as a prototype or practice platform for a photo-sharing service or visual blog. It uses core web technologies to create an aesthetically pleasing, content-focused user interface.
 
-Das Projekt demonstriert den Aufbau eines responsiven Layouts und die Verwendung von CSS für modernes Webdesign.
+The project demonstrates building a responsive layout and utilizing modern CSS for web design without relying on external frameworks.
 
-## 💻 Verwendete Technologien
+## 💻 Technologies Used
 
-Das Projekt ist vollständig in Vanilla-Technologien aufgebaut und benötigt keine externen Frameworks oder Backend-Dienste:
+This project is built entirely with vanilla web technologies, requiring no external frameworks or backend services:
 
-* **HTML5** (Strukturierung)
-* **CSS3** (Styling, Layout, Responsiveness)
-* **JavaScript** (Interaktivität)
+* **HTML5** (Structure and Semantics)
+* **CSS3** (Styling, Layout, and Responsiveness)
+* **JavaScript** (Interactivity and UI enhancements)
 
-## 🚀 Installation (Setup)
+## 🚀 Installation and Setup
 
-Da es sich um ein reines Frontend-Projekt handelt, ist die Installation sehr einfach. Es sind keine Build-Tools oder Server-Umgebungen erforderlich.
+As this is a pure front-end project, the setup process is extremely simple. No build tools or server environments are strictly necessary to view the project.
 
-1.  **Repository klonen:**
+1.  **Clone the Repository:**
     ```bash
     git clone [https://github.com/NeilDACE/Fotogram.git](https://github.com/NeilDACE/Fotogram.git)
     cd Fotogram
     ```
 
-2.  **Starten:**
-    Öffnen Sie einfach die Datei `index.html` in Ihrem bevorzugten Webbrowser.
+2.  **Run the Project:**
+    Simply open the `index.html` file in your preferred web browser.
 
-    *(Tipp: Für die lokale Entwicklung ist die Verwendung eines Live-Servers (z.B. der VS Code Extension "Live Server") empfohlen.)*
+    *(Tip: For local development, using a Live Server extension (e.g., in VS Code) is recommended.)*
 
-## ▶️ Wichtige Dateien
+## ▶️ Key Files and Structure
 
-* `index.html`: Die Hauptseite und Einstiegspunkt der Anwendung.
-* `about-us.html`: Eine dedizierte Seite mit Informationen über das Projekt oder den Ersteller.
-* `style.css`: Enthält alle Styles für das Layout und das Design der Seite.
-* `script.js`: Enthält die JavaScript-Logik zur Steuerung der Benutzeroberfläche (z.B. Navigation, Lightbox, etc.).
-* `img/`: Verzeichnis für alle Bild-Assets.
-* `fonts/`: Verzeichnis für benutzerdefinierte Schriftarten (z.B. Fredoka).
+* `index.html`: The main page and entry point of the application.
+* `about-us.html`: A dedicated page containing information about the project or the creator.
+* `style.css`: Contains all styles for the layout and design of the site.
+* `script.js`: Contains JavaScript logic for UI control (e.g., navigation, lightboxes, etc.).
+* `img/`: Directory for all image assets.
+* `fonts/`: Directory for custom fonts (e.g., Fredoka).
 
-## 🤝 Mitarbeit (Contributing)
+## 🤝 Contributing
 
-Mitarbeit ist immer willkommen! Wenn Sie Fehler beheben, neue Funktionen hinzufügen oder die Dokumentation verbessern möchten, folgen Sie bitte diesen Schritten:
+Contributions are always welcome! If you would like to fix bugs, add new features, or improve documentation, please follow these steps:
 
-1.  Forken Sie das Repository.
-2.  Erstellen Sie einen neuen Branch (`git checkout -b feature/awesome-feature`).
-3.  Führen Sie Ihre Änderungen durch und committen Sie diese (`git commit -m 'feat: Awesome new feature'`).
-4.  Pushen Sie den Branch (`git push origin feature/awesome-feature`).
-5.  Erstellen Sie einen **Pull Request**.
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/awesome-feature`).
+3.  Commit your changes (`git commit -m 'feat: Awesome new feature'`).
+4.  Push the branch (`git push origin feature/awesome-feature`).
+5.  Open a **Pull Request**.
 
-## 📄 Lizenz
+## 📄 License
+
+This project is licensed under the **MIT License**. For more details, see the accompanying [LICENSE](/NeilDACE/Fotogram/blob/main/LICENSE) file.
+
+---
+*Created by [NeilDACE](https://github.com/NeilDACE)*
 
 Dieses Projekt steht unter der **MIT-Lizenz**. Details finden Sie in der beiliegenden Datei [LICENSE](/NeilDACE/Fotogram/blob/main/LICENSE).
 
